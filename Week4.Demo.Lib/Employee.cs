@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Week4.Demo.WcfService
+namespace Week4.Demo.Lib
 {
     [DataContract]
     public class Employee

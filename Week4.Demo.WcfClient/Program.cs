@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Week4.Demo.Lib;
 using Week4.Demo.WcfClient.EmployeeWcf;
 
 namespace Week4.Demo.WcfClient

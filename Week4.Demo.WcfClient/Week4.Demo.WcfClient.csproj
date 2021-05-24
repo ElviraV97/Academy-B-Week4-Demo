@@ -62,15 +62,19 @@
     <None Include="Connected Services\EmployeeWcf\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EmployeeWcf\Week4.Demo.WcfClient.EmployeeWcf.Employee.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmployeeWcf\Week4.Demo.WcfService.xsd">
+    <None Include="Connected Services\EmployeeWcf\Week4.Demo.Lib.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\Week4.Demo.Lib.Employee.datasource" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Week4.Demo.Lib\Week4.Demo.Lib.csproj">
+      <Project>{ed15b170-1c30-4888-b832-32a40290ffae}</Project>
+      <Name>Week4.Demo.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\EmployeeWcf\" />

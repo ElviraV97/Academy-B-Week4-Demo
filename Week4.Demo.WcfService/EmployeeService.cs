@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Week4.Demo.Lib;
 
 namespace Week4.Demo.WcfService
 {

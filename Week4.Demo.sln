@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Demo.WcfClient", "Wee
 		{7E57ECC8-B482-425F-BBE5-771813A90FC6} = {7E57ECC8-B482-425F-BBE5-771813A90FC6}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Demo.Lib", "Week4.Demo.Lib\Week4.Demo.Lib.csproj", "{ED15B170-1C30-4888-B832-32A40290FFAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{69D30D8D-51D9-4BD9-BF8C-B858768DE163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D30D8D-51D9-4BD9-BF8C-B858768DE163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D30D8D-51D9-4BD9-BF8C-B858768DE163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED15B170-1C30-4888-B832-32A40290FFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED15B170-1C30-4888-B832-32A40290FFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED15B170-1C30-4888-B832-32A40290FFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED15B170-1C30-4888-B832-32A40290FFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

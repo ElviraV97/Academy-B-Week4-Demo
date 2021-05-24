@@ -9,86 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace Week4.Demo.WcfClient.EmployeeWcf {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Employee", Namespace="http://schemas.datacontract.org/2004/07/Week4.Demo.WcfService")]
-    [System.SerializableAttribute()]
-    public partial class Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FirstName {
-            get {
-                return this.FirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
-                    this.FirstNameField = value;
-                    this.RaisePropertyChanged("FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeWcf.IEmployeeService")]
@@ -101,16 +22,16 @@ namespace Week4.Demo.WcfClient.EmployeeWcf {
         System.Threading.Tasks.Task<string> GetDiagnosticAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetAllEmployees", ReplyAction="http://tempuri.org/IEmployeeService/GetAllEmployeesResponse")]
-        Week4.Demo.WcfClient.EmployeeWcf.Employee[] GetAllEmployees();
+        System.Collections.Generic.List<Week4.Demo.Lib.Employee> GetAllEmployees();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetAllEmployees", ReplyAction="http://tempuri.org/IEmployeeService/GetAllEmployeesResponse")]
-        System.Threading.Tasks.Task<Week4.Demo.WcfClient.EmployeeWcf.Employee[]> GetAllEmployeesAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<Week4.Demo.Lib.Employee>> GetAllEmployeesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse")]
-        Week4.Demo.WcfClient.EmployeeWcf.Employee GetEmployeeById(int id);
+        Week4.Demo.Lib.Employee GetEmployeeById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse")]
-        System.Threading.Tasks.Task<Week4.Demo.WcfClient.EmployeeWcf.Employee> GetEmployeeByIdAsync(int id);
+        System.Threading.Tasks.Task<Week4.Demo.Lib.Employee> GetEmployeeByIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -148,19 +69,19 @@ namespace Week4.Demo.WcfClient.EmployeeWcf {
             return base.Channel.GetDiagnosticAsync();
         }
         
-        public Week4.Demo.WcfClient.EmployeeWcf.Employee[] GetAllEmployees() {
+        public System.Collections.Generic.List<Week4.Demo.Lib.Employee> GetAllEmployees() {
             return base.Channel.GetAllEmployees();
         }
         
-        public System.Threading.Tasks.Task<Week4.Demo.WcfClient.EmployeeWcf.Employee[]> GetAllEmployeesAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<Week4.Demo.Lib.Employee>> GetAllEmployeesAsync() {
             return base.Channel.GetAllEmployeesAsync();
         }
         
-        public Week4.Demo.WcfClient.EmployeeWcf.Employee GetEmployeeById(int id) {
+        public Week4.Demo.Lib.Employee GetEmployeeById(int id) {
             return base.Channel.GetEmployeeById(id);
         }
         
-        public System.Threading.Tasks.Task<Week4.Demo.WcfClient.EmployeeWcf.Employee> GetEmployeeByIdAsync(int id) {
+        public System.Threading.Tasks.Task<Week4.Demo.Lib.Employee> GetEmployeeByIdAsync(int id) {
             return base.Channel.GetEmployeeByIdAsync(id);
         }
     }
