@@ -5,6 +5,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/Week4.Demo.Lib" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Week4.Demo.WcfService" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IEmployeeService_GetDiagnostic_InputMessage">
@@ -25,6 +26,9 @@
   <wsdl:message name="IEmployeeService_GetEmployeeById_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetEmployeeByIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IEmployeeService_GetEmployeeById_FaultDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Week4.Demo.WcfService" name="detail" element="q1:FaultDetails" />
+  </wsdl:message>
   <wsdl:portType name="IEmployeeService">
     <wsdl:operation name="GetDiagnostic">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/GetDiagnostic" message="tns:IEmployeeService_GetDiagnostic_InputMessage" />
@@ -37,6 +41,7 @@
     <wsdl:operation name="GetEmployeeById">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/GetEmployeeById" message="tns:IEmployeeService_GetEmployeeById_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse" message="tns:IEmployeeService_GetEmployeeById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeService/GetEmployeeByIdFaultDetailsFault" name="FaultDetailsFault" message="tns:IEmployeeService_GetEmployeeById_FaultDetailsFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEmployeeService" type="tns:IEmployeeService">
@@ -67,6 +72,9 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="FaultDetailsFault">
+        <soap:fault use="literal" name="FaultDetailsFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="EmployeeService">

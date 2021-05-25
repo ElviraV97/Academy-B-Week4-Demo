@@ -28,6 +28,7 @@
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="db778a27-f7d1-45d0-b661-8dd4ffd7028b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="180c670e-9dea-4a88-8a3d-f0310f67c543" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
     <MetadataFile FileName="Week4.Demo.Lib.xsd" MetadataType="Schema" ID="e659788f-a4cd-4201-9fcd-1fe741604e26" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
+    <MetadataFile FileName="Week4.Demo.WcfService.xsd" MetadataType="Schema" ID="1a025021-0769-429c-9519-9e653d445d73" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

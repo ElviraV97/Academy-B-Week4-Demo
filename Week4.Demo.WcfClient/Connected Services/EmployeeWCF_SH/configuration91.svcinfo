@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="QokQtplilA7mRoToqn6KV0ECdELRnspjDpdo4F3O+Ro=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="k4syS8aECUXo69AORPRXwutgNUpOgGCv+y0/IFHwBms=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IEmployeeService">
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IEmployeeService1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IEmployeeService</serializedValue>
+          <serializedValue>BasicHttpBinding_IEmployeeService1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IEmployeeService" contract="EmployeeWCF_SH.IEmployeeService" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/" bindingConfiguration="BasicHttpBinding_IEmployeeService">
+    <endpoint name="BasicHttpBinding_IEmployeeService" contract="EmployeeWCF_SH.IEmployeeService" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/" bindingConfiguration="BasicHttpBinding_IEmployeeService1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IEmployeeService</serializedValue>
+          <serializedValue>BasicHttpBinding_IEmployeeService1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>EmployeeWCF_SH.IEmployeeService</serializedValue>

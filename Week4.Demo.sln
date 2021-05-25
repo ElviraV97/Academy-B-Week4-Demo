@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Demo.SelfHosting", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Demo.IISHosting", "Week4.Demo.IISHosting\Week4.Demo.IISHosting.csproj", "{90452F24-D414-40FD-AF9B-F7566A1F4620}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity Framework", "Entity Framework", "{4BF3F688-4D36-47A8-8539-539955BE81C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

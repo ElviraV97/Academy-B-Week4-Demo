@@ -19,6 +19,7 @@ namespace Week4.Demo.WcfService
         List<Employee> GetAllEmployees();
 
         [OperationContract]
+        [FaultContract(typeof(FaultDetails))]
         Employee GetEmployeeById(int id);
     }
 }

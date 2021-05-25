@@ -65,6 +65,9 @@
     <None Include="Connected Services\EmployeeWCF_SH\Week4.Demo.Lib.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\EmployeeWCF_SH\Week4.Demo.WcfService.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\Week4.Demo.Lib.Employee.datasource" />
   </ItemGroup>
   <ItemGroup>

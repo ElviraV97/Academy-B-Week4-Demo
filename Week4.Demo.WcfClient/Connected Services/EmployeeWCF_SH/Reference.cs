@@ -9,7 +9,54 @@
 //------------------------------------------------------------------------------
 
 namespace Week4.Demo.WcfClient.EmployeeWCF_SH {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FaultDetails", Namespace="http://schemas.datacontract.org/2004/07/Week4.Demo.WcfService")]
+    [System.SerializableAttribute()]
+    public partial class FaultDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeWCF_SH.IEmployeeService")]
@@ -28,6 +75,7 @@ namespace Week4.Demo.WcfClient.EmployeeWCF_SH {
         System.Threading.Tasks.Task<System.Collections.Generic.List<Week4.Demo.Lib.Employee>> GetAllEmployeesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Week4.Demo.WcfClient.EmployeeWCF_SH.FaultDetails), Action="http://tempuri.org/IEmployeeService/GetEmployeeByIdFaultDetailsFault", Name="FaultDetails", Namespace="http://schemas.datacontract.org/2004/07/Week4.Demo.WcfService")]
         Week4.Demo.Lib.Employee GetEmployeeById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployeeById", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeByIdResponse")]

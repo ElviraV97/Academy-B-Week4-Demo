@@ -28,6 +28,13 @@ namespace Week4.Demo.WcfService
 
         public Employee GetEmployeeById(int id)
         {
+            if (id <= 0)
+            { 
+                throw new FaultException<FaultDetails>(
+                    new FaultDetails { Message = "ID must be greater than 0." },
+                    new FaultReason("GetEmployeeById Fatal Error"));
+            }
+
             return new Employee
             {
                 Id = id,
