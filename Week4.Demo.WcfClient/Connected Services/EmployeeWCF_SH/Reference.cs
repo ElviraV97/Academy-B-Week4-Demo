@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Week4.Demo.WcfClient.EmployeeWcf {
+namespace Week4.Demo.WcfClient.EmployeeWCF_SH {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeWcf.IEmployeeService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="EmployeeWCF_SH.IEmployeeService")]
     public interface IEmployeeService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetDiagnostic", ReplyAction="http://tempuri.org/IEmployeeService/GetDiagnosticResponse")]
@@ -35,12 +35,12 @@ namespace Week4.Demo.WcfClient.EmployeeWcf {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEmployeeServiceChannel : Week4.Demo.WcfClient.EmployeeWcf.IEmployeeService, System.ServiceModel.IClientChannel {
+    public interface IEmployeeServiceChannel : Week4.Demo.WcfClient.EmployeeWCF_SH.IEmployeeService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EmployeeServiceClient : System.ServiceModel.ClientBase<Week4.Demo.WcfClient.EmployeeWcf.IEmployeeService>, Week4.Demo.WcfClient.EmployeeWcf.IEmployeeService {
+    public partial class EmployeeServiceClient : System.ServiceModel.ClientBase<Week4.Demo.WcfClient.EmployeeWCF_SH.IEmployeeService>, Week4.Demo.WcfClient.EmployeeWCF_SH.IEmployeeService {
         
         public EmployeeServiceClient() {
         }

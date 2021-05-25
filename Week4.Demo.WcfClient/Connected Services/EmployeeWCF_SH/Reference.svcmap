@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="631c9069-c92f-4ef6-b820-241d3261f683" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cbb8a6d4-4462-4028-a4ee-f612641eee95" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -24,10 +24,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1514adf8-9330-4d87-9101-c4a951e8a367" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7bf339c1-530d-405c-a7ee-942720be2a32" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="eaf349e1-e335-427b-b848-5dc443415eaa" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
-    <MetadataFile FileName="Week4.Demo.Lib.xsd" MetadataType="Schema" ID="9700440d-ce10-42cc-9262-0bfcb6794875" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="faa52815-4304-4466-9fdf-058cf4798d51" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="db778a27-f7d1-45d0-b661-8dd4ffd7028b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="180c670e-9dea-4a88-8a3d-f0310f67c543" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
+    <MetadataFile FileName="Week4.Demo.Lib.xsd" MetadataType="Schema" ID="e659788f-a4cd-4201-9fcd-1fe741604e26" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Week4.Demo.WcfService/EmployeeService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

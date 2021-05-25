@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69D30D8D-51D9-4BD9-BF8C-B858768DE163}</ProjectGuid>
+    <ProjectGuid>{82ACE501-35F4-4F59-A552-48F4DC88E332}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week4.Demo.WcfClient</RootNamespace>
-    <AssemblyName>Week4.Demo.WcfClient</AssemblyName>
+    <RootNamespace>Week4.Demo.SelfHosting</RootNamespace>
+    <AssemblyName>Week4.Demo.SelfHosting</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,7 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,51 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\EmployeeWCF_SH\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\EmployeeWCF_SH\service.wsdl" />
-    <None Include="Connected Services\EmployeeWCF_SH\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EmployeeWCF_SH\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\EmployeeWCF_SH\Week4.Demo.Lib.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Properties\DataSources\Week4.Demo.Lib.Employee.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Week4.Demo.Lib\Week4.Demo.Lib.csproj">
-      <Project>{ed15b170-1c30-4888-b832-32a40290ffae}</Project>
-      <Name>Week4.Demo.Lib</Name>
+    <ProjectReference Include="..\Week4.Demo.WcfService\Week4.Demo.WcfService.csproj">
+      <Project>{7e57ecc8-b482-425f-bbe5-771813a90fc6}</Project>
+      <Name>Week4.Demo.WcfService</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\EmployeeWCF_SH\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\EmployeeWCF_SH\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\EmployeeWCF_SH\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\EmployeeWCF_SH\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Core.AdoNet", "Week4.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Library.Wcf", "Week4.Library.Wcf\Week4.Library.Wcf.csproj", "{97F39912-7591-4440-9A34-FAD5921E6D66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Demo.SelfHosting", "Week4.Demo.SelfHosting\Week4.Demo.SelfHosting.csproj", "{82ACE501-35F4-4F59-A552-48F4DC88E332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4.Demo.IISHosting", "Week4.Demo.IISHosting\Week4.Demo.IISHosting.csproj", "{90452F24-D414-40FD-AF9B-F7566A1F4620}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +60,14 @@ Global
 		{97F39912-7591-4440-9A34-FAD5921E6D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97F39912-7591-4440-9A34-FAD5921E6D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97F39912-7591-4440-9A34-FAD5921E6D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82ACE501-35F4-4F59-A552-48F4DC88E332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ACE501-35F4-4F59-A552-48F4DC88E332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ACE501-35F4-4F59-A552-48F4DC88E332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ACE501-35F4-4F59-A552-48F4DC88E332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90452F24-D414-40FD-AF9B-F7566A1F4620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90452F24-D414-40FD-AF9B-F7566A1F4620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90452F24-D414-40FD-AF9B-F7566A1F4620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90452F24-D414-40FD-AF9B-F7566A1F4620}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

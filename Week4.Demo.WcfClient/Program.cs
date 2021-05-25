@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Week4.Demo.Lib;
-using Week4.Demo.WcfClient.EmployeeWcf;
+using Week4.Demo.WcfClient.EmployeeWCF_SH;
 
 namespace Week4.Demo.WcfClient
 {
@@ -12,7 +12,10 @@ namespace Week4.Demo.WcfClient
     {
         static void Main(string[] args)
         {
-            EmployeeServiceClient client = new EmployeeServiceClient();
+            Console.Write("Aspetta il WCF ...");
+            Console.ReadLine();
+
+            EmployeeServiceClient client = new EmployeeServiceClient("BasicHttpBinding_IIS_EXPR");
 
             string diag = client.GetDiagnostic();
 
