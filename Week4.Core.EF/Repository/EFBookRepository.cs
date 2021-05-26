@@ -31,7 +31,7 @@ namespace Week4.Core.EF.Repository
                 ctx.SaveChanges();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -50,7 +50,7 @@ namespace Week4.Core.EF.Repository
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -62,7 +62,7 @@ namespace Week4.Core.EF.Repository
             {
                 return ctx.Books.ToList();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<Book>();
             }
@@ -81,7 +81,7 @@ namespace Week4.Core.EF.Repository
 
                 return book;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -95,7 +95,7 @@ namespace Week4.Core.EF.Repository
                 ctx.SaveChanges();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

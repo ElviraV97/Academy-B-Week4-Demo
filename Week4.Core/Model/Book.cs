@@ -18,5 +18,7 @@ namespace Week4.Core.Model
 
         [DataMember]
         public string Author { get; set; }
+
+        public List<Loan> Loans { get; set; }
     }
 }

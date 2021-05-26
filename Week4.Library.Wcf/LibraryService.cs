@@ -18,10 +18,13 @@ namespace Week4.Library.Wcf
 
         public LibraryService()
         {
+            //var bookRepo = new AdoNetBookRepository();
+            //var loanRepo = new AdoNetLoanRepository();
 
-            //var bookRepo = new EFBookRepository();
-            var bookRepo = new AdoNetBookRepository();
-            bl = new LibraryBL(bookRepo);
+            var bookRepo = new EFBookRepository();
+            var loanRepo = new EFLoanRepository();
+
+            bl = new LibraryBL(bookRepo, loanRepo);
         }
 
         public bool AddNewBook(Book newBook)
@@ -30,7 +33,7 @@ namespace Week4.Library.Wcf
             {
                 return bl.CreateBook(newBook);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return false;
             }
@@ -44,7 +47,7 @@ namespace Week4.Library.Wcf
 
                 return bl.DeleteBook(book);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -56,7 +59,7 @@ namespace Week4.Library.Wcf
             {
                 return bl.EditBook(updatedBook);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -68,7 +71,7 @@ namespace Week4.Library.Wcf
             {
                 return bl.FetchBookByISBN(isbn);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -80,9 +83,33 @@ namespace Week4.Library.Wcf
             {
                 return bl.FetchBooks().ToList();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<Book>();
+            }
+        }
+
+        public bool LoanBook(string isbn, string requestor)
+        {
+            try
+            {
+                return bl.LoanBook(isbn, requestor);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool ReturnBook(string isbn)
+        {
+            try
+            {
+                return bl.ReturnBook(isbn);
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

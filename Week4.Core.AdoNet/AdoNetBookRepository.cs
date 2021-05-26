@@ -39,7 +39,7 @@ namespace Week4.Core.AdoNet
                     if (result == 1)
                         return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     
                 }
@@ -67,7 +67,7 @@ namespace Week4.Core.AdoNet
                     if (result == 1)
                         return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }
@@ -182,7 +182,7 @@ namespace Week4.Core.AdoNet
                     if (result == 1)
                         return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                 }

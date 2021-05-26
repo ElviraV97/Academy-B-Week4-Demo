@@ -25,6 +25,12 @@ namespace Week4.Library.Wcf
 
         [OperationContract]
         bool DeleteBookByISBN(string isbn);
-        
+
+        [OperationContract]
+        bool LoanBook(string isbn, string requestor);
+
+        [OperationContract]
+        bool ReturnBook(string isbn);
+
     }
 }

@@ -9,11 +9,15 @@ namespace Week4.Core.BusinessLayer
     public class LibraryBL : ILibraryBL
     {
         private readonly IBookRepository bookRepo;
+        private readonly ILoanRepository loanRepo;
 
         public LibraryBL(
-            IBookRepository bookRepo)
+            IBookRepository bookRepo,
+            ILoanRepository loanRepo
+            )
         {
             this.bookRepo = bookRepo;
+            this.loanRepo = loanRepo;
         }
 
         #region Book
@@ -39,6 +43,33 @@ namespace Week4.Core.BusinessLayer
         public Book FetchBookByISBN(string isbn)
         {
             return bookRepo.Fetch().FirstOrDefault(b => b.ISBN == isbn);
+        }
+
+        #endregion
+
+        #region Loan
+
+        public bool LoanBook(string isbn, string requestor)
+        {
+            return loanRepo.Add(new Loan { 
+                BookISBN = isbn,
+                User = requestor,
+                LoanDate = DateTime.Now,
+                ReturnDate = null
+            });
+        }
+        public bool ReturnBook(string isbn)
+        {
+            var loanRecord = loanRepo.Fetch().FirstOrDefault(l => l.BookISBN == isbn && l.ReturnDate == null);
+
+            if(loanRecord != null)
+            {
+                loanRecord.ReturnDate = DateTime.Now;
+
+                return loanRepo.Update(loanRecord);
+            }
+
+            return true;
         }
 
         #endregion
