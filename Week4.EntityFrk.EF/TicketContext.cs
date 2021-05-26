@@ -21,6 +21,7 @@ namespace Week4.EntityFrk.EF
             if(!optionsBuilder.IsConfigured)
             {
                 // configurazione locale
+                // don't do this at home !! (and for sure not in PRD)
                 var connString = "Server=.;Database=TicketEF;User ID=ticketing_usr;Password=T1cketing21;MultipleActiveResultSets=True;";
 
                 optionsBuilder.UseSqlServer(connString);
@@ -29,6 +30,7 @@ namespace Week4.EntityFrk.EF
 
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Priority> Priorities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,6 +43,8 @@ namespace Week4.EntityFrk.EF
                 .Property(c => c.Name)
                 .HasMaxLength(255)
                 .IsRequired();
+
+            modelBuilder.ApplyConfiguration<Priority>(new PriorityConfiguration());
         }
     }
 }

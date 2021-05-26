@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Week4.EntityFrk.Core;
 using Week4.EntityFrk.EF;
 
@@ -13,20 +15,46 @@ namespace Week4.EntityFrk.Client
 
             using TicketContext ctx = new();
 
-            Ticket t = new()
-            {
-                Id = 1,
-                Title = "Prima Prova",
-                Description = "Prima Prova DESC",
-                Category = new() { Id = 1, Name = "Development" }
-            };
+            // READ + QUERY (LINQ)
+            foreach (var item in ctx.Tickets.Include(t => t.Category))  // Eager Loading
+                 Console.WriteLine($"[{item.Id}] {item.Title} ({item.Category.Name})");
 
-            ctx.Tickets.Add(t);
-            ctx.SaveChanges();
+            //var data = ctx.Tickets.Where(t => t.Id == 2);   // LINQ
 
-            List<Ticket> tickets = new List<Ticket>();
+            // ADD NEW ITEM - Persistenza del grafo
+            //Ticket t = new()
+            //{
+            //    //Id = 1,
+            //    Title = "Quarta Prova",
+            //    Description = "Quarta Prova DESC",
+            //    CategoryId = 1
+            //    //Category = new() { 
+            //    //    //Id = 1, 
+            //    //    Name = "System" 
+            //    //}
+            //};
 
-            tickets.Add(t);
+            //Ordine o = new()
+            //{
+            //    ID = 1,
+            //    LineeOrdine = new List<Linee> { }
+            //}
+
+            //ctx.Tickets.Add(t);   // t state => ADDED
+
+            // UPDATE
+
+            //var t = ctx.Tickets.FirstOrDefault(t => t.Id == 3); // estraggo t (tracciato da ctx)
+
+            //t.Title = "Titolo modificato";  // t state => MODIFIED
+
+            //ctx.Tickets.Remove(t);  // t state => DELETED
+
+            //ctx.SaveChanges();
+
+            //List<Ticket> tickets = new List<Ticket>();
+
+            //tickets.Add(t);
         }
     }
 }

@@ -17,7 +17,10 @@ namespace Week4.EntityFrk.Core
         public string Title { get; set; }
         public string Description { get; set; }
 
-        //public int CategoryId { get; set; }
+        public int CategoryId { get; set; } // esplicito la FK
         public Category Category { get; set; }
+
+        public int PriorityId { get; set; } // esplicito la FK
+        public Priority Priority { get; set; }
     }
 }

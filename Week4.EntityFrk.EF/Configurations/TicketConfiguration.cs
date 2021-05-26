@@ -16,9 +16,9 @@ namespace Week4.EntityFrk.EF
                 .HasMaxLength(100)
                 .IsRequired();
 
-            // [MinLength(3)] come constraint
+            // [MinLength(10)] come constraint
             builder
-                .HasCheckConstraint("CK_Ticket_Title", "LEN([Title]) >= 3");
+                .HasCheckConstraint("CK_Ticket_Title", "LEN([Title]) >= 10");
         }
     }
 }

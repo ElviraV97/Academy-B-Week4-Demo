@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Week4.EntityFrk.Core
 {
@@ -10,5 +11,7 @@ namespace Week4.EntityFrk.Core
         [Required]
         [MaxLength(255)]
         public string Name { get; set; }
+
+        public List<Ticket> Tickets { get; set; }   // nav prop
     }
 }
