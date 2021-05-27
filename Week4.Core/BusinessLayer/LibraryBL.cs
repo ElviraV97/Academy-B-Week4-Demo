@@ -58,6 +58,7 @@ namespace Week4.Core.BusinessLayer
                 ReturnDate = null
             });
         }
+
         public bool ReturnBook(string isbn)
         {
             var loanRecord = loanRepo.Fetch().FirstOrDefault(l => l.BookISBN == isbn && l.ReturnDate == null);
