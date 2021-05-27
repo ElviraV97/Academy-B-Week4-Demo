@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Week4.EntityFrk.Core;
+using Week4.EntityFrk.EF;
 
 namespace Week4.Demo.API.Controllers
 {
@@ -12,15 +13,25 @@ namespace Week4.Demo.API.Controllers
     [ApiController]
     public class TicketController : ControllerBase
     {
+        private TicketContext ctx;
+
+        public TicketController()
+        {
+            this.ctx = new TicketContext();
+        }
+
         // GET https://hostname/Ticket
         [HttpGet]
         public ActionResult Get()
         {
-            var result = new List<Ticket>
-            {
-                new Ticket { Id = 1, Title = "Primo Ticket" },
-                new Ticket { Id = 1, Title = "Secondo Ticket" },
-            };
+            // MOCK
+            //var result = new List<Ticket>
+            //{
+            //    new Ticket { Id = 1, Title = "Primo Ticket" },
+            //    new Ticket { Id = 1, Title = "Secondo Ticket" },
+            //};
+
+            var result = this.ctx.Tickets.ToList();
 
             return Ok(result);
         }
@@ -32,14 +43,20 @@ namespace Week4.Demo.API.Controllers
             if (ticketId <= 0)
                 return BadRequest("Invalid Ticket ID.");    // HTTP 400
 
-            if (ticketId == 42)
+            var ticket = this.ctx.Tickets.Find(ticketId);
+
+            if (ticket == null)
                 return NotFound($"Ticket with Id = {ticketId} is missing.");    // HTTP 404
 
-            return Ok(new Ticket
-            {
-                Id = ticketId,
-                Title = $"Ticket con id = {ticketId}"
-            });     // HTTP 200
+            return Ok(ticket);  // HTTP 200
+
+            // MOCK
+            //return Ok(new Ticket
+            //{
+            //    Id = ticketId,
+            //    Title = $"Ticket con id = {ticketId}"
+            //});     // HTTP 200
+
         }
 
         // POST https://hostname/Ticket
@@ -50,7 +67,10 @@ namespace Week4.Demo.API.Controllers
             if (newTicket == null)
                 return BadRequest("Invalid Ticket data.");
 
-            return Created("", ""); // HTTP 201
+            this.ctx.Tickets.Add(newTicket);
+            this.ctx.SaveChanges();
+
+            return Created($"/ticket/{newTicket.Id}", newTicket); // HTTP 201
         }
 
         // PUT https://hostname/Ticket/13
@@ -64,6 +84,9 @@ namespace Week4.Demo.API.Controllers
             if (id != editedTicket.Id)
                 return BadRequest("Ticket IDs don't match.");
 
+            ctx.Tickets.Update(editedTicket);
+            ctx.SaveChanges();
+
             return Ok();    // HTTP 200
         }
 
@@ -73,6 +96,13 @@ namespace Week4.Demo.API.Controllers
         {
             if (id <= 0)
                 return BadRequest("Invalid Ticket ID.");    // HTTP 400
+
+            var ticketToBeDeleted = ctx.Tickets.Find(id);
+
+            if (ticketToBeDeleted != null)
+                ctx.Tickets.Remove(ticketToBeDeleted);
+
+            ctx.SaveChanges();
 
             return Ok();    // HTTP 200
         }

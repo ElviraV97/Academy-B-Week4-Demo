@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Week4.EntityFrk.Core\Week4.EntityFrk.Core.csproj" />
+    <ProjectReference Include="..\Week4.EntityFrk.EF\Week4.EntityFrk.EF.csproj" />
   </ItemGroup>
 
 </Project>
