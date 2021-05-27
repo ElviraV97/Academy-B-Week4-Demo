@@ -73,6 +73,35 @@ namespace Week4.Core.BusinessLayer
             return true;
         }
 
+        #region CRUD
+
+        public IEnumerable<Loan> FetchLoans()
+        {
+            return null;
+        }
+
+        public Loan FetchLoanById(int id)
+        {
+            return null;
+        }
+
+        public bool CreateLoan(Loan newLoan)
+        {
+            return true;
+        }
+
+        public bool EditLoan(Loan editedLoan)
+        {
+            return true;
+        }
+
+        public bool DeleteLoan(object loanToBeDeleted)
+        {
+            return true;
+        }
+
+        #endregion
+
         #endregion
     }
 }

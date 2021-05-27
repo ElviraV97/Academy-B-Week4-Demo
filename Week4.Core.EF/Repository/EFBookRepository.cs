@@ -77,7 +77,8 @@ namespace Week4.Core.EF.Repository
         {
             try
             {
-                var book = ctx.Books.Find(isbn);
+                var book = ctx.Books.Include(b => b.Loans)
+                    .FirstOrDefault(b => b.ISBN == isbn);
 
                 return book;
             }

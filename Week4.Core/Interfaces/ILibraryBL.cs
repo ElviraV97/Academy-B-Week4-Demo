@@ -21,6 +21,16 @@ namespace Week4.Core.Interfaces
         bool LoanBook(string isbn, string requestor);
         bool ReturnBook(string isbn);
 
+        #region CRUD
+
+        IEnumerable<Loan> FetchLoans();
+        Loan FetchLoanById(int id);
+        bool CreateLoan(Loan newLoan);
+        bool EditLoan(Loan editedLoan);
+        bool DeleteLoan(object loanToBeDeleted);
+
+        #endregion
+
         #endregion
     }
 }

@@ -38,17 +38,47 @@ namespace Week4.Core.EF.Repository
 
         public bool Delete(Loan item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var loan = ctx.Loans.Find(item.Id);
+
+                if (loan != null)
+                    ctx.Loans.Remove(loan);
+
+                ctx.SaveChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public List<Loan> Fetch()
         {
-            return ctx.Loans.ToList();
+            try
+            {
+                return ctx.Loans.ToList();
+            }
+            catch (Exception)
+            {
+                return new List<Loan>();
+            }
         }
 
         public Loan GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var loan = ctx.Loans.Find(id);
+
+                return loan;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public bool Update(Loan item)
